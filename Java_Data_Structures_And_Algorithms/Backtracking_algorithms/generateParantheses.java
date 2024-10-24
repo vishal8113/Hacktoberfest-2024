@@ -4,7 +4,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class generateParantheses {
+public class GenerateParentheses {
 
     private static void backtrack(List<String> ans, String curr, int open, int close, int max) {
         if(curr.length() == max*2) {
