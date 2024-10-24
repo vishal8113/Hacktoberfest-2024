@@ -15,7 +15,7 @@ public class IndianCoins {
             if(coins[i] <= N){
                 while(coins[i] <= N){
                     count++;
-                    arr.add(coins[i]);
+                    usedCoins.add(coins[i]);
                     N -= coins[i];
                 }
             }
