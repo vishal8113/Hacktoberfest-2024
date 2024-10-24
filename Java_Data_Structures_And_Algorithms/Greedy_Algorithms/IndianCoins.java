@@ -8,7 +8,7 @@ public class IndianCoins {
         Arrays.sort(coins, Comparator.reverseOrder());
 
         int count = 0;
-        ArrayList<Integer> arr = new ArrayList<>();
+        ArrayList<Integer> usedCoins = new ArrayList<>();
 
 
         for(int i=0;i<coins.length;i++){
@@ -22,8 +22,8 @@ public class IndianCoins {
         }
         System.out.println(count);
 
-        for(int i=0;i<arr.size();i++){
-            System.out.print(arr.get(i)+" ");
+        for(int coin : usedCoins){
+            System.out.print(coin + " ");
         }
         System.out.println();
     }
