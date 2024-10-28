@@ -24,3 +24,4 @@ public class selsort {
         printarr(arr);
     }
 }
+
