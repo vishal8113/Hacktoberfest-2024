@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+       
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        for(int t=0;t<T;t++){
+            int N = sc.nextInt();
+            int count=0;
+            for(;N>=5;N/=N/){
+                N=N/5;
+                count= count+N/5;
+            }
+            System.out.println(count);
+        }
+    }
+}
+//Explanation:
+//The number of trailing zeroes in the factorial of a number nn depends on the number of times 55 and 22 appear in its prime factors, as each pair of 2 and 5 contributes a trailing zero.
+//Since there are always more factors of 2 than 5 in factorials, the count of trailing zeros is determined by the number of times 5 appears in the factorization.
+//You continue dividing by higher powers of 5 until the quotient becomes zero. This approach efficiently counts the factors of 5 in n!.
