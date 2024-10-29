@@ -1,0 +1,37 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the number of elements:");
+        int n = sc.nextInt();
+
+        ArrayList<Integer> A = new ArrayList<>();
+        
+        System.out.println("Enter the elements:");
+        for(int i=0;i<n;i++){
+            A.add(sc.nextInt());
+        }
+
+        Solution solution = new Solution();
+        
+        int result = solution.solve(A);
+        
+        
+        System.out.println("Minimum steps required: " + result);
+        System.out.println("Modified Array: " + A);
+    }
+
+    public int solve(ArrayList<Integer> A) {
+        int steps = 0;
+        for(int i = 1; i < A.size(); i++) {
+            if(A.get(i) <= A.get(i - 1)) {
+                int change = (A.get(i - 1) - A.get(i)) + 1;
+                A.set(i, A.get(i) + change); // Corrected line
+                steps = steps+ change;
+            }
+        }
+        return steps;
+    }
+}
